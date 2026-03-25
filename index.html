@@ -12,13 +12,12 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#050509',
-                        electricBlue: '#00f2fe',
-                        neonPurple: '#4facfe',
+                        emeraldGreen: '#10b981',
+                        emeraldDark: '#059669',
                     },
                     boxShadow: {
-                        'neon-blue': '0 0 15px rgba(0, 242, 254, 0.5)',
-                        'neon-card': '0 0 25px rgba(79, 172, 254, 0.2)',
+                        'emerald-glow': '0 0 15px rgba(16, 185, 129, 0.3)',
+                        'emerald-card': '0 0 25px rgba(16, 185, 129, 0.1)',
                     }
                 }
             }
@@ -26,40 +25,40 @@
     </script>
 </head>
 
-<body class="bg-darkBg text-gray-200 min-h-screen flex items-center justify-center p-4 font-sans antialiased">
+<body class="bg-white text-gray-800 min-h-screen flex items-center justify-center p-4 font-sans antialiased">
 
-    <div class="w-full max-w-md bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 shadow-neon-card">
+    <div class="w-full max-w-md bg-white p-8 rounded-2xl border-2 border-emerald-200 shadow-emerald-card">
         
         <h1 class="text-3xl font-extrabold text-center mb-8 tracking-widest uppercase">
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-neonPurple to-electricBlue">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-emerald-500">
                 Fuel Pulse
             </span>
         </h1>
         
-        <p class="text-center text-gray-400 mb-8 text-sm">Cálculo de Consumo Inteligente</p>
+        <p class="text-center text-gray-600 mb-8 text-sm">Cálculo de Consumo Inteligente</p>
 
         <form id="calc-form" class="flex flex-col gap-6">
             
             <div class="relative">
-                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Kilómetros Iniciales</label>
+                <label class="text-xs text-emerald-600 uppercase tracking-wider pl-1 mb-1 block font-semibold">Kilómetros Iniciales</label>
                 <input type="number" id="km-inicio" placeholder="0.0" required
-                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+                    class="w-full bg-emerald-50 border-2 border-emerald-300 text-gray-800 rounded-lg px-4 py-3 text-lg placeholder:text-gray-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition duration-300">
             </div>
 
             <div class="relative">
-                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Kilómetros Finales</label>
+                <label class="text-xs text-emerald-600 uppercase tracking-wider pl-1 mb-1 block font-semibold">Kilómetros Finales</label>
                 <input type="number" id="km-fin" placeholder="0.0" required
-                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+                    class="w-full bg-emerald-50 border-2 border-emerald-300 text-gray-800 rounded-lg px-4 py-3 text-lg placeholder:text-gray-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition duration-300">
             </div>
 
             <div class="relative">
-                <label class="text-xs text-electricBlue uppercase tracking-wider pl-1 mb-1 block">Litros Cargados</label>
+                <label class="text-xs text-emerald-600 uppercase tracking-wider pl-1 mb-1 block font-semibold">Litros Cargados</label>
                 <input type="number" id="litros" placeholder="0.0" step="0.01" required
-                    class="w-full bg-black/30 border border-gray-700 text-white rounded-lg px-4 py-3 text-lg placeholder:text-gray-600 focus:outline-none focus:border-electricBlue focus:ring-1 focus:ring-electricBlue focus:shadow-neon-blue transition duration-300">
+                    class="w-full bg-emerald-50 border-2 border-emerald-300 text-gray-800 rounded-lg px-4 py-3 text-lg placeholder:text-gray-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition duration-300">
             </div>
 
             <button type="submit" 
-                class="w-full mt-4 bg-gradient-to-r from-neonPurple to-electricBlue text-darkBg font-bold uppercase tracking-widest py-4 rounded-lg hover:from-electricBlue hover:to-neonPurple transform hover:scale-[1.02] transition duration-300 shadow-neon-blue active:scale-[0.98]">
+                class="w-full mt-4 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-bold uppercase tracking-widest py-4 rounded-lg hover:from-emerald-700 hover:to-emerald-600 transform hover:scale-[1.02] transition duration-300 shadow-emerald-glow active:scale-[0.98]">
                 Analizar Consumo
             </button>
 
