@@ -62,10 +62,41 @@
                 class="w-full mt-4 bg-gradient-to-r from-neonPurple to-electricBlue text-darkBg font-bold uppercase tracking-widest py-4 rounded-lg hover:from-electricBlue hover:to-neonPurple transform hover:scale-[1.02] transition duration-300 shadow-neon-blue active:scale-[0.98]">
                 Analizar Consumo
             </button>
+
+            <button type="button" id="agregar-carga"
+                class="w-full mt-3 bg-gradient-to-r from-emerald-600 to-teal-500 text-white font-bold uppercase tracking-widest py-4 rounded-lg hover:from-emerald-500 hover:to-teal-400 transform hover:scale-[1.02] transition duration-300 shadow-neon-blue active:scale-[0.98]">
+                Agregar Carga
+            </button>
         </form>
 
         <div id="resultado" class="mt-8 text-center min-h-[50px] transition-all duration-500">
             </div>
+
+        <!-- Tabla de Registros -->
+        <div id="tabla-container" class="mt-8 hidden">
+            <h2 class="text-xl font-bold text-center mb-4 text-electricBlue uppercase">Historial de Cargas</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b border-electricBlue">
+                            <th class="text-left py-2 px-2 text-electricBlue">Km Inicio</th>
+                            <th class="text-left py-2 px-2 text-electricBlue">Km Fin</th>
+                            <th class="text-left py-2 px-2 text-electricBlue">Litros</th>
+                            <th class="text-left py-2 px-2 text-electricBlue">Distancia</th>
+                            <th class="text-left py-2 px-2 text-electricBlue">Consumo L/100km</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-registros">
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-4 flex justify-center">
+                <button type="button" id="finalizar-viaje" class="w-full max-w-sm bg-gradient-to-r from-violet-700 to-fuchsia-500 text-white font-bold uppercase tracking-widest py-3 rounded-lg hover:from-fuchsia-500 hover:to-violet-600 transform hover:scale-[1.02] transition duration-300 shadow-neon-blue active:scale-[0.98]">
+                    Finalizar Viaje y Calcular
+                </button>
+            </div>
+            <div id="total-consumo" class="mt-3 text-center text-lg font-bold text-electricBlue"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
